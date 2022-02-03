@@ -14,15 +14,17 @@ struct AuthView: View {
         ZStack {
             Resources.Colors.background
                 .ignoresSafeArea()
-            VStack {
+            VStack(alignment: .center, spacing: 20) {
                 Resources.Images.cat
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .padding(50)
+                    .padding(.horizontal, 30)
                 
-                AuthTextField(isSecure: false, text: $username, placeholder: "Username")
-                AuthTextField(isSecure: false, text: $password, placeholder: "Password")
-                
+                VStack(alignment: .center, spacing: 10) {
+                    AuthTextField(isSecure: false, text: $username, placeholder: "Username")
+                    AuthTextField(isSecure: true, text: $password, placeholder: "Password")
+                }
+                .padding(.horizontal)
                 
                 Button(action: {}) {
                     Text("Login")
@@ -34,12 +36,23 @@ struct AuthView: View {
                         .padding(.horizontal, 30)
                         .shadow(color: Resources.Colors.main.opacity(0.3), radius: 5, x: 5, y: 5)
                 }
-                
-                Button(action: {}) {
-                    Text("Login with Game Center")
-                        .foregroundColor(Resources.Colors.main)
-                        .font(Resources.Fonts.gnuolane(size: 18))
+                HStack {
+                    Button(action: {}) {
+                        Text("Login with Game Center")
+                            .foregroundColor(Resources.Colors.main)
+                            .font(Resources.Fonts.gnuolane(size: 18))
+                            .frame(alignment: .leading)
+                    }
+                    Spacer()
+                    Button(action: {}) {
+                        Text("Register")
+                            .foregroundColor(Resources.Colors.main)
+                            .font(Resources.Fonts.gnuolane(size: 18))
+                            .frame(alignment: .trailing)
+                    }
                 }
+                .padding(.horizontal, 30)
+
             }
             .ignoresSafeArea()
         }

@@ -26,7 +26,7 @@ struct AuthTextField: View {
         .background(Color.white)
         
         .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-        .padding()
+
         
         
     }
