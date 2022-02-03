@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct AuthView: View {
-    @State var username: String = ""
-    @State var password: String = ""
+    @ObservedObject var viewModel: AuthViewModel
     var body: some View {
         ZStack {
             Resources.Colors.background
@@ -21,8 +20,8 @@ struct AuthView: View {
                     .padding(.horizontal, 30)
                 
                 VStack(alignment: .center, spacing: 10) {
-                    AuthTextField(isSecure: false, text: $username, placeholder: "Username")
-                    AuthTextField(isSecure: true, text: $password, placeholder: "Password")
+                    AuthTextField(isSecure: false, text: $viewModel.username, placeholder: "Username")
+                    AuthTextField(isSecure: true, text: $viewModel.password, placeholder: "Password")
                 }
                 .padding(.horizontal)
                 
@@ -63,7 +62,7 @@ struct AuthView: View {
 #if DEBUG
 struct AuthView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthView()
+        AuthView(viewModel: AuthViewModel())
     }
 }
 #endif

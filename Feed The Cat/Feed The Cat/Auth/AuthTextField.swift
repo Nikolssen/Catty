@@ -11,7 +11,7 @@ struct AuthTextField: View {
     
     let isSecure: Bool
     @Binding var text: String
-    let placeholder: LocalizedStringKey
+    let placeholder: String
     var body: some View {
         HStack {
             Image(systemName: isSecure ? "lock" : "person")
@@ -26,9 +26,6 @@ struct AuthTextField: View {
         .background(Color.white)
         
         .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-
-        
-        
     }
 }
 
@@ -49,7 +46,7 @@ struct AuthTextField_Previews: PreviewProvider {
 
 struct PackedTextField: View {
     @Binding var text: String
-    var placeholder: LocalizedStringKey
+    var placeholder: String
     let isSecure: Bool
     var body: some View {
         if isSecure {

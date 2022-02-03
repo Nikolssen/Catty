@@ -15,6 +15,10 @@ struct GameItem {
         case milk
         case burger
         case life
+        
+        static var random: Kind {
+            [Kind.life, Kind.milk, Kind.milk, Kind.toxic, Kind.bottle, Kind.bottle, Kind.burger, Kind.burger].shuffled().randomElement()!
+        }
     }
     
     let kind: Kind
