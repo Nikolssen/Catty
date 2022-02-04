@@ -21,7 +21,7 @@ struct Feed_The_CatApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            GameView()
+            GameView(lives: .constant(2), satiety: .constant(2))
         }
     }
 }

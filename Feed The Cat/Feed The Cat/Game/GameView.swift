@@ -9,43 +9,22 @@ import SwiftUI
 
 struct GameView: View {
     
+    @Binding var lives: Int
+    @Binding var satiety: Int
 
-    var models: [GameItem] = []
     var body: some View {
 //        Ring()
 //            .stroke(lineWidth: 3)
 //            .foregroundColor(Resources.Colors.main)
-        TimelineView(.periodic(from: .now, by: 0.5)) {timelineContext in
-            Canvas { context, size in
-                    let date = timelineContext.date
-                    var currentPoint = CGPoint(x: 0, y: 0)
-                    var image = context.resolve(Image(systemName: "clock"))
-                    image.shading = .color(.green)
-
-                    for i in 0..<20 {
-                        var innerContext = context
-                        innerContext.opacity = 0.1 * Double(i)
-                        currentPoint.x += offsetFromDate(date: date)
-                        currentPoint.y = 50
-                        innerContext.draw(image, at: currentPoint)
-                    }
-//            GameItem.init(kind: .random, position: 1).image
-//                .resizable()
-//                .foregroundColor(.red)
-//                .frame(width: 40, height: 40, alignment: .center)
-            }
+        TimelineView(.periodic(from: .now, by: 0.005)) {timelineContext in
+            AnimatedView(date: timelineContext.date, lives: $lives, satiety: $satiety)
         }
     }
-        private func offsetFromDate(date: Date) -> CGFloat {
-            let seconds = CGFloat(Calendar.current.component(.second, from: date))
-            print(seconds)
-            return seconds * 5
-        }
 }
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        GameView(lives: .constant(2), satiety: .constant(2))
             .frame(maxWidth: .infinity, minHeight: 50, idealHeight: 100, maxHeight: 100, alignment: .center)
     }
 }

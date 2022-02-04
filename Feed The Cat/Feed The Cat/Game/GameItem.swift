@@ -15,14 +15,10 @@ struct GameItem {
         case milk
         case burger
         case life
-        
-        static var random: Kind {
-            [Kind.life, Kind.milk, Kind.milk, Kind.toxic, Kind.bottle, Kind.bottle, Kind.burger, Kind.burger].shuffled().randomElement()!
-        }
     }
     
     let kind: Kind
-    let position: CGFloat
+    var position: CGFloat
     
     var image: Image {
         switch kind {
@@ -37,6 +33,11 @@ struct GameItem {
         case .life:
             return Image(systemName: "heart.fill")
         }
+    }
+    
+    static var random: GameItem {
+        let kind = [Kind.life, Kind.milk, Kind.milk, Kind.toxic, Kind.bottle, Kind.bottle, Kind.burger, Kind.burger].shuffled().randomElement()!
+        return GameItem(kind: kind, position: 1.0)
     }
 }
 

@@ -14,6 +14,7 @@
 		3FB493EE27AA745F009E8D3B /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493ED27AA745F009E8D3B /* HUDView.swift */; };
 		3FB493F027AA90C0009E8D3B /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493EF27AA90C0009E8D3B /* AuthTextField.swift */; };
 		3FB493F527AAA6DC009E8D3B /* GameItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493F427AAA6DC009E8D3B /* GameItem.swift */; };
+		3FC0E46F27ADA7400071974D /* AnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0E46E27ADA7400071974D /* AnimatedView.swift */; };
 		3FD7E1E327A9A27600A727DD /* Feed_The_CatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E1E227A9A27600A727DD /* Feed_The_CatApp.swift */; };
 		3FD7E1E727A9A27800A727DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD7E1E627A9A27800A727DD /* Assets.xcassets */; };
 		3FD7E1EA27A9A27800A727DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD7E1E927A9A27800A727DD /* Preview Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		3FB493ED27AA745F009E8D3B /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
 		3FB493EF27AA90C0009E8D3B /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
 		3FB493F427AAA6DC009E8D3B /* GameItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameItem.swift; sourceTree = "<group>"; };
+		3FC0E46E27ADA7400071974D /* AnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedView.swift; sourceTree = "<group>"; };
 		3FD7E1DF27A9A27600A727DD /* Feed The Cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Feed The Cat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD7E1E227A9A27600A727DD /* Feed_The_CatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed_The_CatApp.swift; sourceTree = "<group>"; };
 		3FD7E1E627A9A27800A727DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				3FD7E1F027A9A2B600A727DD /* CatView.swift */,
 				3FB493E927AA6BF1009E8D3B /* GameView.swift */,
+				3FC0E46E27ADA7400071974D /* AnimatedView.swift */,
 				3FB493ED27AA745F009E8D3B /* HUDView.swift */,
 				3FB493EB27AA6C7B009E8D3B /* Ring.swift */,
 				3FB493F427AAA6DC009E8D3B /* GameItem.swift */,
@@ -225,6 +228,7 @@
 				3FB493EC27AA6C7B009E8D3B /* Ring.swift in Sources */,
 				3FD7E1E327A9A27600A727DD /* Feed_The_CatApp.swift in Sources */,
 				3FD7E1F827A9A81C00A727DD /* AuthView.swift in Sources */,
+				3FC0E46F27ADA7400071974D /* AnimatedView.swift in Sources */,
 				3FE42F1927AC03B500476D14 /* FirebaseService.swift in Sources */,
 				3FD7E1F127A9A2B600A727DD /* CatView.swift in Sources */,
 				3FE42F1B27AC056600476D14 /* RegisterViewModel.swift in Sources */,
