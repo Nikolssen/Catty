@@ -11,7 +11,7 @@ import Combine
 class GameState: ObservableObject {
     @Published var lives: Int = 2
     @Published var satiety: Int = 0
-    @Published var models: [GameItem] = []
+    var models: [GameItem] = []
     
     func feed() {
         if let index = models.firstIndex(where: { $0.position > 0.47 && $0.position < 0.53})  {
@@ -27,6 +27,22 @@ class GameState: ObservableObject {
             else {
                 lives -= 1
             }
+        }
+    }
+    
+    func update() {
+        for index in 0..<models.count {
+            models[index].position -= 0.005
+        }
+        
+        if let first = models.first?.position, first <= 0.00 {
+            _ = models.removeFirst()
+        }
+        if let last = models.last?.position, last <= 0.71 {
+            models.append(GameItem.random)
+        }
+        if models.isEmpty {
+            models.append(GameItem.random)
         }
     }
 }

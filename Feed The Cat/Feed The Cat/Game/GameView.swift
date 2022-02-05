@@ -9,11 +9,11 @@ import SwiftUI
 
 struct GameView: View {
     
-    @Binding var models: [GameItem]
+    var state: GameState
     
     var body: some View {
         TimelineView(.periodic(from: .now, by: 0.005)) {timelineContext in
-            AnimatedView(date: timelineContext.date, models: $models)
+            AnimatedView(date: timelineContext.date, state: state)
         }
     }
 }

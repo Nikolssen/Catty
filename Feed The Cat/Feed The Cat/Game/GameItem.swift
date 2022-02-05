@@ -51,7 +51,7 @@ struct GameItem {
     }
     
     static var random: GameItem {
-        let kind = [Kind.life, Kind.milk, Kind.toxic, Kind.bottle, Kind.bottle, Kind.burger, Kind.burger, Kind.sausage, Kind.fish].shuffled().randomElement()!
+        let kind = [Kind.life, Kind.milk, Kind.toxic, Kind.bottle, Kind.burger, Kind.sausage, Kind.fish].randomElement()!
         return GameItem(kind: kind, position: 1.0)
     }
 }

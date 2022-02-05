@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct HUDView: View {
-    @Binding var lives: Int
-    @Binding var satiety: Int
+    var lives: Int
+    var satiety: Int
     var body: some View {
         HStack {
             HStack(alignment: .center, spacing: 5) {
@@ -27,7 +27,7 @@ struct HUDView: View {
 
 struct HUDView_Previews: PreviewProvider {
     static var previews: some View {
-        HUDView(lives: .constant(2), satiety: .constant(12))
+        HUDView(lives: 2, satiety: 12)
             .padding()
     }
 }
