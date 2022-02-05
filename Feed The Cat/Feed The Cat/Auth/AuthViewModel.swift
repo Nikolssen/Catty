@@ -12,6 +12,8 @@ class AuthViewModel: ObservableObject {
     @Published var password: String = ""
     
     var loginSubject: PassthroughSubject<Void, Never> = .init()
-    
+    init() {
+        
+    }
 }
 

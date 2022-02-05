@@ -19,12 +19,11 @@ struct AuthTextField: View {
                 .foregroundColor(Resources.Colors.main)
             PackedTextField(text: $text, placeholder: placeholder, isSecure: isSecure)
                 .foregroundColor(Resources.Colors.main)
-                .font(Resources.Fonts.gnuolane(size: 26))
+                .font(Resources.Fonts.molle(size: 26))
                 .accentColor(Resources.Colors.main)
         }
         .padding()
         .background(Color.white)
-        
         .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
     }
 }

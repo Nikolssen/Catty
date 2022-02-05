@@ -19,7 +19,7 @@ struct HUDView: View {
             }
             Spacer()
             Text("Satiety: \(satiety)")
-                .font(Resources.Fonts.gnuolane(size: 24))
+                .font(Resources.Fonts.molle(size: 24))
         }
         .foregroundColor(Resources.Colors.main)
     }

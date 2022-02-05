@@ -9,9 +9,7 @@ import SwiftUI
 
 struct AnimatedView: View {
     let date: Date
-    @Binding var lives: Int
-    @Binding var satiety: Int
-    @State var models: [GameItem] = []
+    @Binding var models: [GameItem]
     var body: some View {
         
         Canvas { context, size in
@@ -20,12 +18,13 @@ struct AnimatedView: View {
                 if model.kind == .life {
                     image.shading = .color(Resources.Colors.main)
                 }
-                let currentPoint = CGPoint(x: size.width * model.position, y: 0)
-                context.draw(image, in: CGRect(origin: currentPoint, size:CGSize(width: 50, height: 50)), style: .init(eoFill: true, antialiased: true))
+                let currentPoint = CGPoint(x: size.width * model.position, y: size.height / 2 - 20)
+                context.draw(image, in: CGRect(origin: currentPoint, size:CGSize(width: 40, height: 40)), style: .init(eoFill: true, antialiased: true))
             }
+            context.stroke(Path(ellipseIn: CGRect(x: size.width / 2 - 25, y: size.height / 2 - 25, width: 50, height: 50)), with: .color(Resources.Colors.main), lineWidth: 3)
         }
         .onChange(of: date) { date in
-            for (index, _) in models.enumerated() {
+            for index in 0..<models.count {
                 models[index].position -= 0.005
             }
             

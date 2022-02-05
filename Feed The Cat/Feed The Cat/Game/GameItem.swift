@@ -14,6 +14,8 @@ struct GameItem {
         case toxic
         case milk
         case burger
+        case fish
+        case sausage
         case life
     }
     
@@ -32,11 +34,24 @@ struct GameItem {
             return Resources.Images.milk
         case .life:
             return Image(systemName: "heart.fill")
+        case .fish:
+            return Resources.Images.fish
+        case .sausage:
+            return Resources.Images.sausage
+        }
+    }
+    
+    var isEatable: Bool {
+        switch kind {
+        case .bottle, .toxic:
+            return false
+        default:
+            return true
         }
     }
     
     static var random: GameItem {
-        let kind = [Kind.life, Kind.milk, Kind.milk, Kind.toxic, Kind.bottle, Kind.bottle, Kind.burger, Kind.burger].shuffled().randomElement()!
+        let kind = [Kind.life, Kind.milk, Kind.toxic, Kind.bottle, Kind.bottle, Kind.burger, Kind.burger, Kind.sausage, Kind.fish].shuffled().randomElement()!
         return GameItem(kind: kind, position: 1.0)
     }
 }

@@ -27,7 +27,7 @@ struct AuthView: View {
                 
                 Button(action: {}) {
                     Text("Login")
-                        .font(Resources.Fonts.gnuolane(size: 24))
+                        .font(Resources.Fonts.molle(size: 24))
                         .foregroundColor(Resources.Colors.background)
                         .frame(minWidth: 30, maxWidth: .infinity, minHeight: 20, maxHeight: 50, alignment: .center)
                         .background(Resources.Colors.main)
@@ -39,14 +39,14 @@ struct AuthView: View {
                     Button(action: {}) {
                         Text("Login with Game Center")
                             .foregroundColor(Resources.Colors.main)
-                            .font(Resources.Fonts.gnuolane(size: 18))
+                            .font(Resources.Fonts.molle(size: 18))
                             .frame(alignment: .leading)
                     }
                     Spacer()
                     Button(action: {}) {
                         Text("Register")
                             .foregroundColor(Resources.Colors.main)
-                            .font(Resources.Fonts.gnuolane(size: 18))
+                            .font(Resources.Fonts.molle(size: 18))
                             .frame(alignment: .trailing)
                     }
                 }

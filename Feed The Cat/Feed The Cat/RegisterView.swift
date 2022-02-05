@@ -27,7 +27,7 @@ struct RegisterView: View {
                 
                 Button(action: {}) {
                     Text(Constants.registerTitle)
-                        .font(Resources.Fonts.gnuolane(size: 24))
+                        .font(Resources.Fonts.molle(size: 24))
                         .foregroundColor(Resources.Colors.background)
                         .frame(minWidth: 30, maxWidth: .infinity, minHeight: 20, maxHeight: 50, alignment: .center)
                         .background(Resources.Colors.main)
