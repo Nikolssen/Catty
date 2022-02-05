@@ -10,6 +10,7 @@
 		3F1BA77927ABB60000A3BE5E /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BA77827ABB60000A3BE5E /* GameState.swift */; };
 		3F1BA77B27ABB7BA00A3BE5E /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BA77A27ABB7BA00A3BE5E /* RegisterView.swift */; };
 		3F56211027AE84B20031F26A /* Molle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F56210F27AE84B20031F26A /* Molle-Regular.ttf */; };
+		3F56211227AEB4180031F26A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56211127AEB4180031F26A /* MainView.swift */; };
 		3FB493EA27AA6BF1009E8D3B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493E927AA6BF1009E8D3B /* GameView.swift */; };
 		3FB493EE27AA745F009E8D3B /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493ED27AA745F009E8D3B /* HUDView.swift */; };
 		3FB493F027AA90C0009E8D3B /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493EF27AA90C0009E8D3B /* AuthTextField.swift */; };
@@ -33,6 +34,7 @@
 		3F1BA77827ABB60000A3BE5E /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		3F1BA77A27ABB7BA00A3BE5E /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		3F56210F27AE84B20031F26A /* Molle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Molle-Regular.ttf"; sourceTree = "<group>"; };
+		3F56211127AEB4180031F26A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3FB493E927AA6BF1009E8D3B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		3FB493ED27AA745F009E8D3B /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
 		3FB493EF27AA90C0009E8D3B /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				3F1BA77A27ABB7BA00A3BE5E /* RegisterView.swift */,
 				3FE42F1A27AC056600476D14 /* RegisterViewModel.swift */,
 				3FE42F1827AC03B500476D14 /* FirebaseService.swift */,
+				3F56211127AEB4180031F26A /* MainView.swift */,
 			);
 			path = "Feed The Cat";
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				3FE42F1727AC03A500476D14 /* AuthViewModel.swift in Sources */,
 				3F1BA77927ABB60000A3BE5E /* GameState.swift in Sources */,
 				3FB493EA27AA6BF1009E8D3B /* GameView.swift in Sources */,
+				3F56211227AEB4180031F26A /* MainView.swift in Sources */,
 				3FB493F527AAA6DC009E8D3B /* GameItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
