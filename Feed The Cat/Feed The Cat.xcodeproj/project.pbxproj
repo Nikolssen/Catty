@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3F1BA77927ABB60000A3BE5E /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BA77827ABB60000A3BE5E /* GameState.swift */; };
 		3F1BA77B27ABB7BA00A3BE5E /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BA77A27ABB7BA00A3BE5E /* RegisterView.swift */; };
+		3F207A3C27B0FE1D001480AB /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F207A3B27B0FE1D001480AB /* OptionsView.swift */; };
+		3F512A4F27B03551007B5206 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F512A4E27B03551007B5206 /* ResultView.swift */; };
+		3F512A5227B03578007B5206 /* ResultInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F512A5127B03578007B5206 /* ResultInfo.swift */; };
+		3F512A5527B03D98007B5206 /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F512A5427B03D98007B5206 /* AuthorView.swift */; };
 		3F56211027AE84B20031F26A /* Molle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F56210F27AE84B20031F26A /* Molle-Regular.ttf */; };
 		3F56211227AEB4180031F26A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56211127AEB4180031F26A /* MainView.swift */; };
 		3FB493EA27AA6BF1009E8D3B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493E927AA6BF1009E8D3B /* GameView.swift */; };
@@ -33,6 +37,10 @@
 /* Begin PBXFileReference section */
 		3F1BA77827ABB60000A3BE5E /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		3F1BA77A27ABB7BA00A3BE5E /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		3F207A3B27B0FE1D001480AB /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		3F512A4E27B03551007B5206 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		3F512A5127B03578007B5206 /* ResultInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultInfo.swift; sourceTree = "<group>"; };
+		3F512A5427B03D98007B5206 /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
 		3F56210F27AE84B20031F26A /* Molle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Molle-Regular.ttf"; sourceTree = "<group>"; };
 		3F56211127AEB4180031F26A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3FB493E927AA6BF1009E8D3B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -67,6 +75,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F207A3D27B0FE61001480AB /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				3F512A5427B03D98007B5206 /* AuthorView.swift */,
+				3F207A3B27B0FE1D001480AB /* OptionsView.swift */,
+				3F512A5027B03558007B5206 /* Result */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		3F512A5027B03558007B5206 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				3F512A4E27B03551007B5206 /* ResultView.swift */,
+				3F512A5127B03578007B5206 /* ResultInfo.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		3F512A5327B03733007B5206 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				3F1BA77A27ABB7BA00A3BE5E /* RegisterView.swift */,
+				3FE42F1A27AC056600476D14 /* RegisterViewModel.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
 		3FB493F127AAA08D009E8D3B /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +155,8 @@
 		3FD7E1E127A9A27600A727DD /* Feed The Cat */ = {
 			isa = PBXGroup;
 			children = (
+				3F207A3D27B0FE61001480AB /* Options */,
+				3F512A5327B03733007B5206 /* Registration */,
 				3FB493F227AAA0A5009E8D3B /* Game */,
 				3FB493F127AAA08D009E8D3B /* Auth */,
 				3FB493F327AAA0C5009E8D3B /* Resources */,
@@ -126,8 +164,6 @@
 				3FD7E1F627A9A50B00A727DD /* Feed-The-Cat-Info.plist */,
 				3FE42F0F27AC02D800476D14 /* GoogleService-Info.plist */,
 				3FD7E1E827A9A27800A727DD /* Preview Content */,
-				3F1BA77A27ABB7BA00A3BE5E /* RegisterView.swift */,
-				3FE42F1A27AC056600476D14 /* RegisterViewModel.swift */,
 				3FE42F1827AC03B500476D14 /* FirebaseService.swift */,
 				3F56211127AEB4180031F26A /* MainView.swift */,
 			);
@@ -223,13 +259,17 @@
 			files = (
 				3F1BA77B27ABB7BA00A3BE5E /* RegisterView.swift in Sources */,
 				3FB493EE27AA745F009E8D3B /* HUDView.swift in Sources */,
+				3F512A5227B03578007B5206 /* ResultInfo.swift in Sources */,
 				3FB493F027AA90C0009E8D3B /* AuthTextField.swift in Sources */,
 				3FD7E1F327A9A38100A727DD /* Resources.swift in Sources */,
 				3FD7E1E327A9A27600A727DD /* Feed_The_CatApp.swift in Sources */,
+				3F512A4F27B03551007B5206 /* ResultView.swift in Sources */,
 				3FD7E1F827A9A81C00A727DD /* AuthView.swift in Sources */,
 				3FC0E46F27ADA7400071974D /* AnimatedView.swift in Sources */,
+				3F512A5527B03D98007B5206 /* AuthorView.swift in Sources */,
 				3FE42F1927AC03B500476D14 /* FirebaseService.swift in Sources */,
 				3FD7E1F127A9A2B600A727DD /* CatView.swift in Sources */,
+				3F207A3C27B0FE1D001480AB /* OptionsView.swift in Sources */,
 				3FE42F1B27AC056600476D14 /* RegisterViewModel.swift in Sources */,
 				3FE42F1727AC03A500476D14 /* AuthViewModel.swift in Sources */,
 				3F1BA77927ABB60000A3BE5E /* GameState.swift in Sources */,

@@ -15,16 +15,11 @@ struct MainView: View {
                     Label("Play!", systemImage: "gamecontroller")
                 }
                 .tag(0)
-            Text("Results")
+            OptionsView()
                 .tabItem {
-                    Label("Results", systemImage: "flag.2.crossed")
+                    Label("Options", systemImage: "flag.2.crossed")
                 }
                 .tag(1)
-            Text("About Author")
-                .tabItem {
-                    Label("Author", systemImage: "graduationcap")
-                }
-                .tag(2)
         }
     }
     
