@@ -11,24 +11,25 @@ struct OptionsView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Resources.Colors.background
-                    .ignoresSafeArea()
+                
                 List {
-                    Text("Instruction")
+                    NavigationLink("Instruction", destination: EmptyView())
                     NavigationLink("Results", destination: ResultView())
-                    Text("Achievements")
+                    NavigationLink("Achievements", destination: EmptyView())
                     NavigationLink("About author", destination: AuthorView())
+                    Text("Logout")
                 }
-                .font(Resources.Fonts.molle(size: 18))
             }
             .navigationTitle("Options")
             .navigationBarTitleDisplayMode(.large)
         }
-
+        
     }
     
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Molle-Regular", size: 32)!, .foregroundColor: UIColor(Resources.Colors.main)]
+        UITableView.appearance().backgroundColor = UIColor(Resources.Colors.background)
+        
     }
 }
 

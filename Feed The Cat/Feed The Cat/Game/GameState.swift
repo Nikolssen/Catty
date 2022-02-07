@@ -5,12 +5,15 @@
 //  Created by Ivan Budovich on 2/3/22.
 //
 
-import Foundation
+import UIKit
 import Combine
 
 class GameState: ObservableObject {
     @Published var lives: Int = 2
     @Published var satiety: Int = 0
+    @Published var showingActivity: Bool = false
+    var lastGameResult: ResultInfo?
+    
     var models: [GameItem] = []
     
     func feed() {
@@ -23,9 +26,15 @@ class GameState: ObservableObject {
             }
             if model.isEatable {
                 satiety += 1
+                UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+                showingActivity.toggle()
             }
             else {
+                if lives == 1 {
+                    lastGameResult = .init(date: Date(), score: satiety, player: "Player1", isCommited: false)
+                }
                 lives -= 1
+                UIImpactFeedbackGenerator(style: .soft).impactOccurred()
             }
         }
     }
@@ -44,5 +53,10 @@ class GameState: ObservableObject {
         if models.isEmpty {
             models.append(GameItem.random)
         }
+    }
+    
+    func newGame() {
+        satiety = 0
+        lives = 2
     }
 }

@@ -20,8 +20,6 @@ struct AuthorView: View {
                 Spacer()
                 Text("2022")
             }
-            .font(Resources.Fonts.molle(size: 19))
-            
         }
     }
 }

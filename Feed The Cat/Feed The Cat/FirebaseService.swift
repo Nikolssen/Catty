@@ -11,13 +11,60 @@ import Combine
 
 final class FirebaseService {
     
-//    func signIn(login: String, password: String) -> Publisher<Void, NSError> {
-//        return
-//    }
+    var currentPlayer: String?
     
-//    func signUp(login: String, password: String) -> Publisher<Void, NSError> {
-//        return
-//    }
+    func signIn(email: String, password: String) -> AnyPublisher<AuthDataResult, NSError> {
+        return Deferred {
+            return Future { future in
+                Auth.auth().signIn(withEmail: email, password: password) { result, error in
+                    if let error = error {
+                        future(.failure(error as NSError))
+                    }
+                    else {
+                        future(.success(result!))
+                    }
+                }
+            }
+        }
+        .eraseToAnyPublisher()
+    }
 
-//   func getUserProgress(userID: String)
+    func createUser(email: String, password: String) -> AnyPublisher<AuthDataResult, NSError>{
+        return Deferred{
+            return Future {
+                future in
+                Auth.auth().createUser(withEmail: email, password: password) { result, error in
+                    if let error = error {
+                        future(.failure(error as NSError))
+                    }
+                    else {
+                        future(.success(result!))
+                    }
+                }
+            }
+        }
+        .eraseToAnyPublisher()
+    }
+    
+    func logout() {
+        try? Auth.auth().signOut()
+    }
+    
+    //
+    //    func signIn(googleCredentials: AuthCredential) -> Single<AuthDataResult>{
+    //        return Single<AuthDataResult>.create{
+    //            single in
+    //            Auth.auth().signIn(with: googleCredentials){
+    //                result, error in
+    //                if let error = error {
+    //                    single(.failure(error))
+    //                }
+    //                else {
+    //                    single(.success(result!))
+    //                }
+    //
+    //            }
+    //            return Disposables.create()
+    //        }
+    //    }
 }

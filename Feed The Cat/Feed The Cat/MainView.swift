@@ -8,19 +8,33 @@
 import SwiftUI
 
 struct MainView: View {
+    @State var showLaunch: Bool = true
     var body: some View {
-        TabView {
-            CatView()
-                .tabItem {
-                    Label("Play!", systemImage: "gamecontroller")
+        ZStack {
+            if showLaunch {
+                AnimatedLaunchScreen()
+            }
+            else {
+                TabView {
+                    CatView()
+                        .tabItem {
+                            Label("Play!", systemImage: "gamecontroller")
+                        }
+                        .tag(0)
+                    OptionsView()
+                        .tabItem {
+                            Label("Options", systemImage: "flag.2.crossed")
+                        }
+                        .tag(1)
                 }
-                .tag(0)
-            OptionsView()
-                .tabItem {
-                    Label("Options", systemImage: "flag.2.crossed")
-                }
-                .tag(1)
+            }
         }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                showLaunch = false
+            }
+        }
+
     }
     
     init() {

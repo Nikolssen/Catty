@@ -10,6 +10,9 @@
 		3F1BA77927ABB60000A3BE5E /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BA77827ABB60000A3BE5E /* GameState.swift */; };
 		3F1BA77B27ABB7BA00A3BE5E /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BA77A27ABB7BA00A3BE5E /* RegisterView.swift */; };
 		3F207A3C27B0FE1D001480AB /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F207A3B27B0FE1D001480AB /* OptionsView.swift */; };
+		3F207A3F27B106CC001480AB /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F207A3E27B106CC001480AB /* ActivityView.swift */; };
+		3F207A4127B11179001480AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F207A4027B11179001480AB /* LaunchScreen.storyboard */; };
+		3F207A4327B118D7001480AB /* AnimatedLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F207A4227B118D7001480AB /* AnimatedLaunchScreen.swift */; };
 		3F512A4F27B03551007B5206 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F512A4E27B03551007B5206 /* ResultView.swift */; };
 		3F512A5227B03578007B5206 /* ResultInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F512A5127B03578007B5206 /* ResultInfo.swift */; };
 		3F512A5527B03D98007B5206 /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F512A5427B03D98007B5206 /* AuthorView.swift */; };
@@ -38,6 +41,9 @@
 		3F1BA77827ABB60000A3BE5E /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		3F1BA77A27ABB7BA00A3BE5E /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		3F207A3B27B0FE1D001480AB /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		3F207A3E27B106CC001480AB /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		3F207A4027B11179001480AB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F207A4227B118D7001480AB /* AnimatedLaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedLaunchScreen.swift; sourceTree = "<group>"; };
 		3F512A4E27B03551007B5206 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		3F512A5127B03578007B5206 /* ResultInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultInfo.swift; sourceTree = "<group>"; };
 		3F512A5427B03D98007B5206 /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
@@ -155,6 +161,8 @@
 		3FD7E1E127A9A27600A727DD /* Feed The Cat */ = {
 			isa = PBXGroup;
 			children = (
+				3F207A4227B118D7001480AB /* AnimatedLaunchScreen.swift */,
+				3F207A4027B11179001480AB /* LaunchScreen.storyboard */,
 				3F207A3D27B0FE61001480AB /* Options */,
 				3F512A5327B03733007B5206 /* Registration */,
 				3FB493F227AAA0A5009E8D3B /* Game */,
@@ -166,6 +174,7 @@
 				3FD7E1E827A9A27800A727DD /* Preview Content */,
 				3FE42F1827AC03B500476D14 /* FirebaseService.swift */,
 				3F56211127AEB4180031F26A /* MainView.swift */,
+				3F207A3E27B106CC001480AB /* ActivityView.swift */,
 			);
 			path = "Feed The Cat";
 			sourceTree = "<group>";
@@ -246,6 +255,7 @@
 				3FE42F1027AC02D800476D14 /* GoogleService-Info.plist in Resources */,
 				3F56211027AE84B20031F26A /* Molle-Regular.ttf in Resources */,
 				3FD7E1EA27A9A27800A727DD /* Preview Assets.xcassets in Resources */,
+				3F207A4127B11179001480AB /* LaunchScreen.storyboard in Resources */,
 				3FD7E1E727A9A27800A727DD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,10 +280,12 @@
 				3FE42F1927AC03B500476D14 /* FirebaseService.swift in Sources */,
 				3FD7E1F127A9A2B600A727DD /* CatView.swift in Sources */,
 				3F207A3C27B0FE1D001480AB /* OptionsView.swift in Sources */,
+				3F207A3F27B106CC001480AB /* ActivityView.swift in Sources */,
 				3FE42F1B27AC056600476D14 /* RegisterViewModel.swift in Sources */,
 				3FE42F1727AC03A500476D14 /* AuthViewModel.swift in Sources */,
 				3F1BA77927ABB60000A3BE5E /* GameState.swift in Sources */,
 				3FB493EA27AA6BF1009E8D3B /* GameView.swift in Sources */,
+				3F207A4327B118D7001480AB /* AnimatedLaunchScreen.swift in Sources */,
 				3F56211227AEB4180031F26A /* MainView.swift in Sources */,
 				3FB493F527AAA6DC009E8D3B /* GameItem.swift in Sources */,
 			);
@@ -413,6 +425,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -444,6 +457,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

@@ -23,12 +23,11 @@ struct CatView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .padding(.horizontal, 50)
-//                        .onChange(of: gameState.satiety) {
-//                            withAnimation(<#T##body: () throws -> Result##() throws -> Result#>)
-//                        }
+                        .rotationEffect(.degrees(gameState.showingActivity ? 360.0 : 0.0))
+                    
                     GameView(state: gameState)
                         .frame(maxWidth: .infinity, minHeight: 50, idealHeight: 100, maxHeight: 100, alignment: .center)
-                    Button(action: { gameState.feed() }) {
+                    Button(action: { withAnimation { gameState.feed() }  }) {
                         Text(Constants.actionText)
                             .font(Resources.Fonts.molle(size: 24))
                             .foregroundColor(Resources.Colors.background)
