@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct AuthView: View {
-    @ObservedObject var viewModel: AuthViewModel
+    @StateObject var viewModel: AuthViewModel
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
         ZStack {
             Resources.Colors.background
@@ -20,8 +22,8 @@ struct AuthView: View {
                     .padding(.horizontal, 30)
                 
                 VStack(alignment: .center, spacing: 10) {
-                    AuthTextField(isSecure: false, text: $viewModel.username, placeholder: "E-mail")
-                    AuthTextField(isSecure: true, text: $viewModel.password, placeholder: "Password")
+                    AuthTextField(isSecure: false, text: $viewModel.email, placeholder: Constants.emailPlaceholder)
+                    AuthTextField(isSecure: true, text: $viewModel.password, placeholder: Constants.passwordPlaceholder)
                 }
                 .padding(.horizontal)
                 
@@ -34,7 +36,7 @@ struct AuthView: View {
                             .frame(alignment: .leading)
                     }
                     Spacer()
-                    Button(action: {}) {
+                    Button(action: { appState.state = .registration }) {
                         Text(Constants.registerTitle)
                             .foregroundColor(Resources.Colors.main)
                             .font(Resources.Fonts.molle(size: 18))
@@ -46,18 +48,19 @@ struct AuthView: View {
             }
             .ignoresSafeArea()
         }
+        .onReceive(viewModel.$isAuthorized) {
+            if $0 {
+                appState.state = .tabBar
+            }
+        }
     }
     
     enum Constants {
         static let loginTitle: String = "Login"
         static let gameCenterTitle: String = "Login with Game Center"
         static let registerTitle: String = "Register"
+        static let emailPlaceholder: String = "E-mail"
+        static let passwordPlaceholder: String = "Password"
     }
 }
-#if DEBUG
-struct AuthView_Previews: PreviewProvider {
-    static var previews: some View {
-        AuthView(viewModel: AuthViewModel())
-    }
-}
-#endif
+

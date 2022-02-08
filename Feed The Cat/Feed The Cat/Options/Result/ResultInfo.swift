@@ -14,7 +14,7 @@ struct ResultInfo {
     var isCommited: Bool
 }
 
-struct ResultViewModel {
+struct ResultInfoViewModel {
     let result: ResultInfo
     let index: Int
 }

@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @ObservedObject var viewModel: RegisterViewModel = .init()
+    @StateObject var viewModel: RegisterViewModel
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
         ZStack {
             Resources.Colors.background
@@ -20,25 +22,35 @@ struct RegisterView: View {
                     .padding(.horizontal, 30)
                 
                 VStack(alignment: .center, spacing: 10) {
-                    AuthTextField(isSecure: false, text: $viewModel.username, placeholder: Constants.usernamePlaceholder)
+                    AuthTextField(isSecure: false, text: $viewModel.email, placeholder: Constants.usernamePlaceholder)
                     AuthTextField(isSecure: true, text: $viewModel.password, placeholder: Constants.passwordPlaceholder)
                 }
                 .padding(.horizontal)
-                RedButton(text: Constants.registerTitle) { viewModel.registerSubject.send(Void())}
+                VStack {
+                    RedButton(text: Constants.registerTitle) { viewModel.registerSubject.send(Void())}
+                    Button(action: { appState.state = .authorization }) {
+                        Text(Constants.loginTitle)
+                            .foregroundColor(Resources.Colors.main)
+                            .font(Resources.Fonts.molle(size: 18))
+                            .frame(alignment: .trailing)
+                    }
+                }
             }
             .ignoresSafeArea()
         }
+        .onReceive(viewModel.$isAuthorized) {
+            if $0 {
+                appState.state = .tabBar
+            }
+        }
+    
     }
     
     enum Constants {
         static let usernamePlaceholder = "Username"
         static let passwordPlaceholder = "Password"
         static let registerTitle = "Register"
+        static let loginTitle = "Login"
     }
 }
 
-struct RegisterView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegisterView(viewModel: RegisterViewModel())
-    }
-}

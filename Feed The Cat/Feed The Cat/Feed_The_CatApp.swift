@@ -22,6 +22,8 @@ struct Feed_The_CatApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(Service())
+                .environmentObject(AppState())
         }
     }
 }

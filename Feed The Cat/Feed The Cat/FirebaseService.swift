@@ -11,17 +11,26 @@ import Combine
 
 final class FirebaseService {
     
-    var currentPlayer: String?
+    var currentPlayer: String? {
+        authResult?.user.email ?? authResult?.user.displayName
+    }
     
-    func signIn(email: String, password: String) -> AnyPublisher<AuthDataResult, NSError> {
-        return Deferred {
+    var playerUID: String? {
+        authResult?.user.uid
+    }
+    
+    private var authResult: AuthDataResult?
+    
+    func signIn(email: String, password: String) -> AnyPublisher<Void, NSError> {
+        return Deferred { [weak self] in
             return Future { future in
                 Auth.auth().signIn(withEmail: email, password: password) { result, error in
                     if let error = error {
                         future(.failure(error as NSError))
                     }
                     else {
-                        future(.success(result!))
+                        future(.success(Void()))
+                        self?.authResult = result
                     }
                 }
             }
@@ -29,8 +38,8 @@ final class FirebaseService {
         .eraseToAnyPublisher()
     }
 
-    func createUser(email: String, password: String) -> AnyPublisher<AuthDataResult, NSError>{
-        return Deferred{
+    func createUser(email: String, password: String) -> AnyPublisher<Void, NSError>{
+        return Deferred{ [weak self] in
             return Future {
                 future in
                 Auth.auth().createUser(withEmail: email, password: password) { result, error in
@@ -38,7 +47,8 @@ final class FirebaseService {
                         future(.failure(error as NSError))
                     }
                     else {
-                        future(.success(result!))
+                        future(.success(Void()))
+                        self?.authResult = result
                     }
                 }
             }
@@ -48,8 +58,12 @@ final class FirebaseService {
     
     func logout() {
         try? Auth.auth().signOut()
+        authResult = nil
     }
     
+//    func getUserResults(userUID: String) -> AnyPublisher<[ResultInfo], NSError> {
+//        
+//    }
     //
     //    func signIn(googleCredentials: AuthCredential) -> Single<AuthDataResult>{
     //        return Single<AuthDataResult>.create{

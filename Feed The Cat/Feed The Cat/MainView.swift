@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var showLaunch: Bool = true
+    
+
+    @EnvironmentObject var service: Service
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
         ZStack {
-            if showLaunch {
+            switch appState.state {
+            case .launchScreen:
                 AnimatedLaunchScreen()
-            }
-            else {
+            case .authorization:
+                AuthView(viewModel: .init(service: service))
+                    .transition(.slide)
+            case .registration:
+                RegisterView(viewModel: .init(service: service))
+                    .transition(.slide)
+            case .tabBar:
                 TabView {
                     CatView()
                         .tabItem {
@@ -27,11 +37,7 @@ struct MainView: View {
                         }
                         .tag(1)
                 }
-            }
-        }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                showLaunch = false
+                .transition(.slide)
             }
         }
 

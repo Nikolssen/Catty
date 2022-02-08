@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AnimatedLaunchScreen: View {
     @State var animation: Bool = false
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
         ZStack {
             Resources.Colors.background
@@ -20,6 +22,9 @@ struct AnimatedLaunchScreen: View {
                 .animation(.spring(response: 0.2).repeatForever(autoreverses: true), value: animation)
                 .onAppear {
                     animation = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                        appState.state = .authorization
+                    }
                 }
         }        
     }

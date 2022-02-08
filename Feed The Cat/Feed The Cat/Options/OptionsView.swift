@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct OptionsView: View {
+    @EnvironmentObject var service: Service
+    @EnvironmentObject var appState: AppState
     var body: some View {
         NavigationView {
             ZStack {
@@ -18,6 +20,10 @@ struct OptionsView: View {
                     NavigationLink("Achievements", destination: EmptyView())
                     NavigationLink("About author", destination: AuthorView())
                     Text("Logout")
+                        .onTapGesture {
+                            service.firebaseService.logout()
+                            appState.state = .authorization
+                        }
                 }
             }
             .navigationTitle("Options")
@@ -31,11 +37,5 @@ struct OptionsView: View {
         UITableView.appearance().backgroundColor = UIColor(Resources.Colors.background)
         UINavigationBar.appearance().barTintColor = UIColor(Resources.Colors.background)
         UIBarButtonItem.appearance().tintColor = UIColor(Resources.Colors.main)        
-    }
-}
-
-struct OptionsView_Previews: PreviewProvider {
-    static var previews: some View {
-        OptionsView()
     }
 }
