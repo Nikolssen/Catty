@@ -28,7 +28,7 @@ struct RegisterView: View {
                 .padding(.horizontal)
                 VStack {
                     RedButton(text: Constants.registerTitle) { viewModel.registerSubject.send(Void())}
-                    Button(action: { appState.state = .authorization }) {
+                    Button(action: { appState.flow = .authorization }) {
                         Text(Constants.loginTitle)
                             .foregroundColor(Resources.Colors.main)
                             .font(Resources.Fonts.molle(size: 18))
@@ -40,13 +40,13 @@ struct RegisterView: View {
         }
         .onReceive(viewModel.$isAuthorized) {
             if $0 {
-                appState.state = .tabBar
+                appState.flow = .tabBar
             }
         }
     
     }
     
-    enum Constants {
+    private enum Constants {
         static let usernamePlaceholder = "Username"
         static let passwordPlaceholder = "Password"
         static let registerTitle = "Register"

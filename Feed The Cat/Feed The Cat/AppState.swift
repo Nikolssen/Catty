@@ -10,12 +10,12 @@ import Combine
 
 class AppState: ObservableObject {
     
-    enum ApplicationState {
+    enum Flow {
         case launchScreen
         case authorization
         case registration
         case tabBar
     }
     
-    @Published var state: AppState.ApplicationState = .launchScreen
+    @Published var flow: AppState.Flow = .launchScreen
 }

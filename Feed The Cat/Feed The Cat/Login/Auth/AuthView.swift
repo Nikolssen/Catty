@@ -36,7 +36,7 @@ struct AuthView: View {
                             .frame(alignment: .leading)
                     }
                     Spacer()
-                    Button(action: { appState.state = .registration }) {
+                    Button(action: { appState.flow = .registration }) {
                         Text(Constants.registerTitle)
                             .foregroundColor(Resources.Colors.main)
                             .font(Resources.Fonts.molle(size: 18))
@@ -50,12 +50,12 @@ struct AuthView: View {
         }
         .onReceive(viewModel.$isAuthorized) {
             if $0 {
-                appState.state = .tabBar
+                appState.flow = .tabBar
             }
         }
     }
     
-    enum Constants {
+    private enum Constants {
         static let loginTitle: String = "Login"
         static let gameCenterTitle: String = "Login with Game Center"
         static let registerTitle: String = "Register"

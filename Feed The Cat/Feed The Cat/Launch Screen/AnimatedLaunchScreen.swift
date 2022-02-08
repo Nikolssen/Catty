@@ -23,7 +23,7 @@ struct AnimatedLaunchScreen: View {
                 .onAppear {
                     animation = true
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                        appState.state = .authorization
+                        appState.flow = .authorization
                     }
                 }
         }        

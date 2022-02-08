@@ -16,7 +16,7 @@ struct AuthorView: View {
                 Spacer()
                 Text("Feed The Cat")
                 Text("By Ivan Budovich")
-                Text("BSUIR, 951002 group")
+                Text("BSUIR, 951002 group, First Lab")
                 Spacer()
                 Text("2022")
             }

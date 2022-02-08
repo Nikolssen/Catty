@@ -48,7 +48,7 @@ struct CatView: View {
         UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Molle-Regular", size: 32)!, .foregroundColor: UIColor(Resources.Colors.main)]
     }
     
-    enum Constants {
+    private enum Constants {
         static let title: String = "Feed the cat"
         static let actionText = "Feed"
     }

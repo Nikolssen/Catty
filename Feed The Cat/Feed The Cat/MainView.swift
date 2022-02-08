@@ -15,7 +15,7 @@ struct MainView: View {
     
     var body: some View {
         ZStack {
-            switch appState.state {
+            switch appState.flow {
             case .launchScreen:
                 AnimatedLaunchScreen()
             case .authorization:

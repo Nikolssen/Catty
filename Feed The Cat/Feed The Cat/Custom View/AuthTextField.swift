@@ -33,7 +33,6 @@ struct AuthTextField_Previews: PreviewProvider {
         VStack {
             
             AuthTextField(isSecure: false, text: .constant(""), placeholder: "Username")
-            
             AuthTextField(isSecure: true, text: .constant(""), placeholder: "Password")
             
         }

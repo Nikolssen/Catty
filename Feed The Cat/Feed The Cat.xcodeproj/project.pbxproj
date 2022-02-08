@@ -22,6 +22,7 @@
 		3F56211227AEB4180031F26A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56211127AEB4180031F26A /* MainView.swift */; };
 		3F67F1DB27B30AC0004BCD3F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67F1DA27B30AC0004BCD3F /* AppState.swift */; };
 		3F67F1DD27B310CE004BCD3F /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67F1DC27B310CE004BCD3F /* ResultViewModel.swift */; };
+		3F67F1DF27B31278004BCD3F /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67F1DE27B31278004BCD3F /* InstructionView.swift */; };
 		3FB493EA27AA6BF1009E8D3B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493E927AA6BF1009E8D3B /* GameView.swift */; };
 		3FB493EE27AA745F009E8D3B /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493ED27AA745F009E8D3B /* HUDView.swift */; };
 		3FB493F027AA90C0009E8D3B /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493EF27AA90C0009E8D3B /* AuthTextField.swift */; };
@@ -59,6 +60,7 @@
 		3F56211127AEB4180031F26A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3F67F1DA27B30AC0004BCD3F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		3F67F1DC27B310CE004BCD3F /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		3F67F1DE27B31278004BCD3F /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
 		3FB493E927AA6BF1009E8D3B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		3FB493ED27AA745F009E8D3B /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
 		3FB493EF27AA90C0009E8D3B /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				3F512A5427B03D98007B5206 /* AuthorView.swift */,
 				3F207A3B27B0FE1D001480AB /* OptionsView.swift */,
 				3F512A5027B03558007B5206 /* Result */,
+				3F67F1DE27B31278004BCD3F /* InstructionView.swift */,
 			);
 			path = Options;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				3F512A5227B03578007B5206 /* ResultInfo.swift in Sources */,
 				3FB493F027AA90C0009E8D3B /* AuthTextField.swift in Sources */,
 				3FD7E1F327A9A38100A727DD /* Resources.swift in Sources */,
+				3F67F1DF27B31278004BCD3F /* InstructionView.swift in Sources */,
 				3FD7E1E327A9A27600A727DD /* Feed_The_CatApp.swift in Sources */,
 				3F512A4F27B03551007B5206 /* ResultView.swift in Sources */,
 				3FD7E1F827A9A81C00A727DD /* AuthView.swift in Sources */,
