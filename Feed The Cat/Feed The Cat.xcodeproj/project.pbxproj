@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1684A727B245880093AFC4 /* NewGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1684A627B245880093AFC4 /* NewGameView.swift */; };
+		3F1684A927B2488A0093AFC4 /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1684A827B2488A0093AFC4 /* RedButton.swift */; };
 		3F1BA77927ABB60000A3BE5E /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BA77827ABB60000A3BE5E /* GameState.swift */; };
 		3F1BA77B27ABB7BA00A3BE5E /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1BA77A27ABB7BA00A3BE5E /* RegisterView.swift */; };
 		3F207A3C27B0FE1D001480AB /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F207A3B27B0FE1D001480AB /* OptionsView.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F1684A627B245880093AFC4 /* NewGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameView.swift; sourceTree = "<group>"; };
+		3F1684A827B2488A0093AFC4 /* RedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
 		3F1BA77827ABB60000A3BE5E /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		3F1BA77A27ABB7BA00A3BE5E /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		3F207A3B27B0FE1D001480AB /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				3FB493F427AAA6DC009E8D3B /* GameItem.swift */,
 				3FC0E46E27ADA7400071974D /* AnimatedView.swift */,
 				3F1BA77827ABB60000A3BE5E /* GameState.swift */,
+				3F1684A627B245880093AFC4 /* NewGameView.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				3FE42F1827AC03B500476D14 /* FirebaseService.swift */,
 				3F56211127AEB4180031F26A /* MainView.swift */,
 				3F207A3E27B106CC001480AB /* ActivityView.swift */,
+				3F1684A827B2488A0093AFC4 /* RedButton.swift */,
 			);
 			path = "Feed The Cat";
 			sourceTree = "<group>";
@@ -282,11 +288,13 @@
 				3F207A3C27B0FE1D001480AB /* OptionsView.swift in Sources */,
 				3F207A3F27B106CC001480AB /* ActivityView.swift in Sources */,
 				3FE42F1B27AC056600476D14 /* RegisterViewModel.swift in Sources */,
+				3F1684A727B245880093AFC4 /* NewGameView.swift in Sources */,
 				3FE42F1727AC03A500476D14 /* AuthViewModel.swift in Sources */,
 				3F1BA77927ABB60000A3BE5E /* GameState.swift in Sources */,
 				3FB493EA27AA6BF1009E8D3B /* GameView.swift in Sources */,
 				3F207A4327B118D7001480AB /* AnimatedLaunchScreen.swift in Sources */,
 				3F56211227AEB4180031F26A /* MainView.swift in Sources */,
+				3F1684A927B2488A0093AFC4 /* RedButton.swift in Sources */,
 				3FB493F527AAA6DC009E8D3B /* GameItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,43 +8,38 @@
 import SwiftUI
 
 struct CatView: View {
-    @StateObject private var gameState: GameState = .init()
+    @StateObject private var state: GameState = .init()
     var body: some View {
-
-            NavigationView {
-                ZStack {
-                    Resources.Colors.background
-                        .ignoresSafeArea()
+        
+        NavigationView {
+            ZStack {
+                Resources.Colors.background
+                    .ignoresSafeArea()
                 VStack {
-                    HUDView(lives: gameState.lives, satiety: gameState.satiety)
-                        .padding(.horizontal)
+                    if state.isGameStarted {
+                        HUDView(lives: state.lives, satiety: state.satiety)
+                            .padding(.horizontal)
+                    }
                     Spacer()
                     Resources.Images.cat
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .padding(.horizontal, 50)
-                        .rotationEffect(.degrees(gameState.showingActivity ? 360.0 : 0.0))
-                    
-                    GameView(state: gameState)
-                        .frame(maxWidth: .infinity, minHeight: 50, idealHeight: 100, maxHeight: 100, alignment: .center)
-                    Button(action: { withAnimation { gameState.feed() }  }) {
-                        Text(Constants.actionText)
-                            .font(Resources.Fonts.molle(size: 24))
-                            .foregroundColor(Resources.Colors.background)
-                            .frame(minWidth: 30, maxWidth: .infinity, minHeight: 20, maxHeight: 50, alignment: .center)
+                        .rotationEffect(.degrees(state.showingActivity ? 360.0 : 0.0))
+                    if state.isGameStarted {
+                        GameView(state: state)
+                            .frame(maxWidth: .infinity, minHeight: 50, idealHeight: 100, maxHeight: 100, alignment: .center)
+                        RedButton(text: Constants.actionText, action: { withAnimation { state.feed() }  })
+                    } else {
+                        NewGameView(state: state)
                     }
-                    .buttonStyle(.borderless)
-                    .background(Resources.Colors.main)
-                    .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                    .shadow(color: Resources.Colors.main.opacity(0.3), radius: 5, x: 5, y: 5)
-                    .padding(.horizontal, 30)
                     Spacer()
                 }
-
+                
                 
             }
-                .navigationBarTitleDisplayMode(.large)
-                .navigationTitle(Constants.title)
+            .navigationBarTitleDisplayMode(.large)
+            .navigationTitle(Constants.title)
             
         }
         

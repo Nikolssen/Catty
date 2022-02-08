@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GameView: View {
     
-    var state: GameState
+    let state: GameState
     
     var body: some View {
         TimelineView(.periodic(from: .now, by: 0.005)) {timelineContext in

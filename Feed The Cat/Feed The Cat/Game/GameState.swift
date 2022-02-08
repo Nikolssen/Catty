@@ -12,16 +12,18 @@ class GameState: ObservableObject {
     @Published var lives: Int = 2
     @Published var satiety: Int = 0
     @Published var showingActivity: Bool = false
-    var lastGameResult: ResultInfo?
-    
-    var models: [GameItem] = []
+    private(set) var lastGameResult: ResultInfo?
+    private(set) var isGameStarted: Bool = false
+    private(set) var models: [GameItem] = []
     
     func feed() {
         if let index = models.firstIndex(where: { $0.position > 0.47 && $0.position < 0.53})  {
             let model = models[index]
             models.remove(at: index)
-            if model.kind == .life && lives < 3 {
-                lives += 1
+            if model.kind == .life {
+                if lives < 3 {
+                    lives += 1
+                }
                 return
             }
             if model.isEatable {
@@ -30,11 +32,12 @@ class GameState: ObservableObject {
                 showingActivity.toggle()
             }
             else {
-                if lives == 1 {
-                    lastGameResult = .init(date: Date(), score: satiety, player: "Player1", isCommited: false)
-                }
                 lives -= 1
                 UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+                if lives == 0 {
+                    lastGameResult = .init(date: .now, score: satiety, player: "Player1", isCommited: false)
+                    isGameStarted = false
+                }
             }
         }
     }
@@ -58,5 +61,6 @@ class GameState: ObservableObject {
     func newGame() {
         satiety = 0
         lives = 2
+        isGameStarted = true
     }
 }

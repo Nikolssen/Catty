@@ -17,7 +17,7 @@ struct AnimatedLaunchScreen: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(.horizontal, animation ? 50 : 100)
-                .animation(.spring().repeatForever(autoreverses: true), value: animation)
+                .animation(.spring(response: 0.2).repeatForever(autoreverses: true), value: animation)
                 .onAppear {
                     animation = true
                 }
