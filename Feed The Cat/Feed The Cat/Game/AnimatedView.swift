@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnimatedView: View {
     let date: Date
-    var state: GameState
+    let state: GameState
     var body: some View {
         
         Canvas { context, size in

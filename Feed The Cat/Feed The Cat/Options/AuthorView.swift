@@ -20,6 +20,7 @@ struct AuthorView: View {
                 Spacer()
                 Text("2022")
             }
+            .foregroundColor(Resources.Colors.main)
         }
     }
 }

@@ -29,7 +29,8 @@ struct OptionsView: View {
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Molle-Regular", size: 32)!, .foregroundColor: UIColor(Resources.Colors.main)]
         UITableView.appearance().backgroundColor = UIColor(Resources.Colors.background)
-        
+        UINavigationBar.appearance().barTintColor = UIColor(Resources.Colors.background)
+        UIBarButtonItem.appearance().tintColor = UIColor(Resources.Colors.main)        
     }
 }
 

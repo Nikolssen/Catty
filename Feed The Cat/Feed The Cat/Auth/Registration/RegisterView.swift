@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @ObservedObject var viewModel: RegisterViewModel
+    @ObservedObject var viewModel: RegisterViewModel = .init()
     var body: some View {
         ZStack {
             Resources.Colors.background
@@ -24,17 +24,7 @@ struct RegisterView: View {
                     AuthTextField(isSecure: true, text: $viewModel.password, placeholder: Constants.passwordPlaceholder)
                 }
                 .padding(.horizontal)
-                
-                Button(action: {}) {
-                    Text(Constants.registerTitle)
-                        .font(Resources.Fonts.molle(size: 24))
-                        .foregroundColor(Resources.Colors.background)
-                        .frame(minWidth: 30, maxWidth: .infinity, minHeight: 20, maxHeight: 50, alignment: .center)
-                        .background(Resources.Colors.main)
-                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                        .padding(.horizontal, 30)
-                        .shadow(color: Resources.Colors.main.opacity(0.3), radius: 5, x: 5, y: 5)
-                }
+                RedButton(text: Constants.registerTitle) { viewModel.registerSubject.send(Void())}
             }
             .ignoresSafeArea()
         }

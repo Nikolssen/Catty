@@ -6,5 +6,7 @@
 	<array>
 		<string>Molle-Regular.ttf</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
 </dict>
 </plist>

@@ -20,31 +20,22 @@ struct AuthView: View {
                     .padding(.horizontal, 30)
                 
                 VStack(alignment: .center, spacing: 10) {
-                    AuthTextField(isSecure: false, text: $viewModel.username, placeholder: "Username")
+                    AuthTextField(isSecure: false, text: $viewModel.username, placeholder: "E-mail")
                     AuthTextField(isSecure: true, text: $viewModel.password, placeholder: "Password")
                 }
                 .padding(.horizontal)
                 
-                Button(action: {}) {
-                    Text("Login")
-                        .font(Resources.Fonts.molle(size: 24))
-                        .foregroundColor(Resources.Colors.background)
-                        .frame(minWidth: 30, maxWidth: .infinity, minHeight: 20, maxHeight: 50, alignment: .center)
-                        .background(Resources.Colors.main)
-                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                        .padding(.horizontal, 30)
-                        .shadow(color: Resources.Colors.main.opacity(0.3), radius: 5, x: 5, y: 5)
-                }
+                RedButton(text: Constants.loginTitle, action: { viewModel.loginSubject.send(Void()) })
                 HStack {
                     Button(action: {}) {
-                        Text("Login with Game Center")
+                        Text(Constants.gameCenterTitle)
                             .foregroundColor(Resources.Colors.main)
                             .font(Resources.Fonts.molle(size: 18))
                             .frame(alignment: .leading)
                     }
                     Spacer()
                     Button(action: {}) {
-                        Text("Register")
+                        Text(Constants.registerTitle)
                             .foregroundColor(Resources.Colors.main)
                             .font(Resources.Fonts.molle(size: 18))
                             .frame(alignment: .trailing)
@@ -55,8 +46,12 @@ struct AuthView: View {
             }
             .ignoresSafeArea()
         }
-        
-        
+    }
+    
+    enum Constants {
+        static let loginTitle: String = "Login"
+        static let gameCenterTitle: String = "Login with Game Center"
+        static let registerTitle: String = "Register"
     }
 }
 #if DEBUG

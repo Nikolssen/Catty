@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct HUDView: View {
-    var lives: Int
-    var satiety: Int
+    let lives: Int
+    let satiety: Int
     var body: some View {
         HStack {
             HStack(alignment: .center, spacing: 5) {
