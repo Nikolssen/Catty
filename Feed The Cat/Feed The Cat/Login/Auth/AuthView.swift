@@ -35,6 +35,7 @@ struct AuthView: View {
                             .font(Resources.Fonts.molle(size: 18))
                             .frame(alignment: .leading)
                     }
+                    .buttonStyle(.borderless)
                     Spacer()
                     Button(action: { appState.flow = .registration }) {
                         Text(Constants.registerTitle)
@@ -42,6 +43,7 @@ struct AuthView: View {
                             .font(Resources.Fonts.molle(size: 18))
                             .frame(alignment: .trailing)
                     }
+                    .buttonStyle(.borderless)
                 }
                 .padding(.horizontal, 30)
 

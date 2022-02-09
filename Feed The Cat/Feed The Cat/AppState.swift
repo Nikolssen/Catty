@@ -17,5 +17,5 @@ final class AppState: ObservableObject {
         case tabBar
     }
     
-    @Published var flow: AppState.Flow = .tabBar
+    @Published var flow: AppState.Flow = .launchScreen
 }

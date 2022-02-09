@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct ResultView: View {
+    @StateObject var viewModel: ResultViewModel
     var body: some View {
-        EmptyView()
-    }
-}
-
-struct ResultView_Previews: PreviewProvider {
-    static var previews: some View {
-        ResultView()
+        VStack {
+            if viewModel.isLoading {
+                ProgressView()
+                    .scaleEffect(3)
+            }
+            if let models = viewModel.results {
+                List {
+                    ForEach(models, id: \.index) {
+                        Text($0.result.player)
+                    }
+                }
+            }
+        }
     }
 }

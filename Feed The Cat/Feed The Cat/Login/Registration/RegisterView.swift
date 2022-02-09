@@ -34,10 +34,12 @@ struct RegisterView: View {
                             .font(Resources.Fonts.molle(size: 18))
                             .frame(alignment: .trailing)
                     }
+                    .buttonStyle(.borderless)
                 }
             }
             .ignoresSafeArea()
         }
+        .alert(Constants.errorMessage, isPresented: $viewModel.showAlert, actions: {})
         .onReceive(viewModel.$isAuthorized) {
             if $0 {
                 appState.flow = .tabBar
@@ -51,6 +53,7 @@ struct RegisterView: View {
         static let passwordPlaceholder = "Password"
         static let registerTitle = "Register"
         static let loginTitle = "Login"
+        static let errorMessage = "The error occured. Check your internet connection and input"
     }
 }
 

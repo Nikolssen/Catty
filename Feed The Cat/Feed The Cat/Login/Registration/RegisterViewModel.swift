@@ -17,6 +17,7 @@ final class RegisterViewModel: ObservableObject {
     var registerSubject: PassthroughSubject<Void, Never> = .init()
     var subscribtions: Set<AnyCancellable> = .init()
     @Published var isAuthorized: Bool = false
+    @Published var showAlert: Bool = false
     
     init(service: Service) {
         self.service = service
@@ -34,9 +35,15 @@ final class RegisterViewModel: ObservableObject {
                 service.firebaseService.createUser(email: email, password: password)
             }
             .receive(on: DispatchQueue.main)
-            .handleEvents(receiveOutput: {} , receiveCompletion: { error in })
+            .handleEvents(receiveCompletion: { [weak self] _ in self?.showAlert = true })
             .retry(1)
-            .sink(receiveCompletion: {_ in }, receiveValue: {})
+            .sink(receiveCompletion: {_ in }, receiveValue: {[weak self] in self?.isAuthorized = true })
+            .store(in: &subscribtions)
+        
+        validationPublisher
+            .filter { !$0.isValid }
+            .map { _ in Void() }
+            .sink(receiveValue: { [weak self] in self?.showAlert = true })
             .store(in: &subscribtions)
     }
     

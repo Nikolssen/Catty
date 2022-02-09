@@ -33,6 +33,7 @@ final class AuthViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var isAuthorized: Bool = false
+    @Published var showAlert: Bool = false
     
     let service: Service
     var loginSubject: PassthroughSubject<Void, Never> = .init()
@@ -54,9 +55,15 @@ final class AuthViewModel: ObservableObject {
                 service.firebaseService.signIn(email: email, password: password)
             }
             .receive(on: DispatchQueue.main)
-            .handleEvents(receiveOutput: {} , receiveCompletion: { error in })
+            .handleEvents(receiveCompletion: { [weak self] _ in self?.showAlert = true })
             .retry(1)
-            .sink(receiveCompletion: {_ in }, receiveValue: {})
+            .sink(receiveCompletion: {_ in }, receiveValue: {[weak self] in self?.isAuthorized = true })
+            .store(in: &subscribtions)
+        
+        validationPublisher
+            .filter { !$0.isValid }
+            .map { _ in Void() }
+            .sink(receiveValue: { [weak self] in self?.showAlert = true })
             .store(in: &subscribtions)
     }
 }
