@@ -11,7 +11,6 @@ struct ResultInfo {
     let date: Date
     let score: Int
     let player: String
-    var isCommited: Bool
 }
 
 struct ResultInfoViewModel {

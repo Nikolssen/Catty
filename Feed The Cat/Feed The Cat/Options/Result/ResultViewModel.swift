@@ -8,7 +8,8 @@
 import Foundation
 import Combine
 
-class ResultViewModel: ObservableObject {
+final class ResultViewModel: ObservableObject {
     @Published var results: [ResultInfoViewModel]?
+    @Published var isLoading: Bool = false
     let startSubject: PassthroughSubject<Void, Never> = .init()
 }

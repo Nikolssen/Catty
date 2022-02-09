@@ -8,7 +8,7 @@
 import Combine
 import Foundation
 
-class RegisterViewModel: ObservableObject {
+final class RegisterViewModel: ObservableObject {
 
     
     @Published var email: String = ""

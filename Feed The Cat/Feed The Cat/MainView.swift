@@ -14,7 +14,6 @@ struct MainView: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        ZStack {
             switch appState.flow {
             case .launchScreen:
                 AnimatedLaunchScreen()
@@ -26,7 +25,7 @@ struct MainView: View {
                     .transition(.slide)
             case .tabBar:
                 TabView {
-                    CatView()
+                    CatView(state: .init(service: service))
                         .tabItem {
                             Label("Play!", systemImage: "gamecontroller")
                         }
@@ -37,24 +36,10 @@ struct MainView: View {
                         }
                         .tag(1)
                 }
+                .accentColor(Color(UIColor.clear))
                 .transition(.slide)
+                
             }
-        }
-
-    }
-    
-    init() {
-        
-        let itemAppearance = UITabBarItemAppearance()
-        itemAppearance.selected.iconColor = UIColor(Resources.Colors.main)
-        itemAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(Resources.Colors.main)]
-        
-        let appeareance = UITabBarAppearance()
-        appeareance.stackedLayoutAppearance = itemAppearance
-        appeareance.inlineLayoutAppearance = itemAppearance
-        appeareance.compactInlineLayoutAppearance = itemAppearance
-
-        UITabBar.appearance().standardAppearance = appeareance
     }
 }
 

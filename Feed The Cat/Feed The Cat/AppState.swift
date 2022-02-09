@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class AppState: ObservableObject {
+final class AppState: ObservableObject {
     
     enum Flow {
         case launchScreen
@@ -17,5 +17,5 @@ class AppState: ObservableObject {
         case tabBar
     }
     
-    @Published var flow: AppState.Flow = .launchScreen
+    @Published var flow: AppState.Flow = .tabBar
 }

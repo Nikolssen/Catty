@@ -8,13 +8,18 @@
 import UIKit
 import Combine
 
-class GameState: ObservableObject {
+final class GameState: ObservableObject {
     @Published var lives: Int = 2
     @Published var satiety: Int = 0
     @Published var showingActivity: Bool = false
+    let service: Service
     private(set) var lastGameResult: ResultInfo?
     private(set) var isGameStarted: Bool = false
     private(set) var models: [GameItem] = []
+    
+    init(service: Service) {
+        self.service = service
+    }
     
     func feed() {
         if let index = models.firstIndex(where: { $0.position > 0.47 && $0.position < 0.53})  {
@@ -35,7 +40,9 @@ class GameState: ObservableObject {
                 lives -= 1
                 UIImpactFeedbackGenerator(style: .soft).impactOccurred()
                 if lives == 0 {
-                    lastGameResult = .init(date: .now, score: satiety, player: "Player1", isCommited: false)
+                    let result = ResultInfo(date: .now, score: satiety, player: service.firebaseService.currentPlayer ?? "Unknown Player")
+                    lastGameResult = result
+                    report(result: result)
                     isGameStarted = false
                 }
             }
@@ -62,5 +69,9 @@ class GameState: ObservableObject {
         satiety = 0
         lives = 2
         isGameStarted = true
+    }
+    
+    func report(result: ResultInfo) {
+        
     }
 }

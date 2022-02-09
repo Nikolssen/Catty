@@ -7,6 +7,6 @@
 
 import Foundation
 
-class Service: ObservableObject {
+final class Service: ObservableObject {
     let firebaseService: FirebaseService = .init()
 }
