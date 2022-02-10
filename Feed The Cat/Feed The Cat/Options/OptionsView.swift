@@ -16,13 +16,15 @@ struct OptionsView: View {
                 
                 List {
                     NavigationLink("Instruction", destination: InstructionView())
-                    NavigationLink("Results", destination: ResultView())
-                    NavigationLink("Achievements", destination: EmptyView())
+                    NavigationLink("Results", destination: ResultView(viewModel: .init(service: service)))
+                    NavigationLink("Achievements", destination: AchievementsListView(viewModel: .init(service: service)))
                     NavigationLink("About author", destination: AuthorView())
                     Text("Logout")
                         .onTapGesture {
                             service.firebaseService.logout()
-                            appState.flow = .authorization
+                            withAnimation {
+                                appState.flow = .authorization
+                            }
                         }
                 }
             }

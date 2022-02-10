@@ -37,7 +37,10 @@ struct AuthView: View {
                     }
                     .buttonStyle(.borderless)
                     Spacer()
-                    Button(action: { appState.flow = .registration }) {
+                    Button(action: {
+                        withAnimation {
+                            appState.flow = .registration
+                        } }) {
                         Text(Constants.registerTitle)
                             .foregroundColor(Resources.Colors.main)
                             .font(Resources.Fonts.molle(size: 18))
@@ -50,9 +53,12 @@ struct AuthView: View {
             }
             .ignoresSafeArea()
         }
+        .alert(Constants.errorMessage, isPresented: $viewModel.showAlert, actions: {})
         .onReceive(viewModel.$isAuthorized) {
             if $0 {
-                appState.flow = .tabBar
+                withAnimation {
+                    appState.flow = .tabBar
+                }
             }
         }
     }
@@ -63,6 +69,7 @@ struct AuthView: View {
         static let registerTitle: String = "Register"
         static let emailPlaceholder: String = "E-mail"
         static let passwordPlaceholder: String = "Password"
+        static let errorMessage = "The error occured. Check your internet connection and input"
     }
 }
 

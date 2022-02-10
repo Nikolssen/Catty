@@ -23,5 +23,9 @@ struct ResultView: View {
                 }
             }
         }
+        .background(Resources.Colors.background)
+        .onAppear {
+            viewModel.startSubject.send(Void())
+        }
     }
 }

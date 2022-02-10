@@ -72,6 +72,7 @@ final class GameState: ObservableObject {
     }
     
     func report(result: ResultInfo) {
-        
+        service.firebaseService.publishUserResult(result: result)
+//        service.firebaseService.publishUserAchievement(name: )
     }
 }

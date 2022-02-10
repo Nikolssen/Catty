@@ -19,10 +19,10 @@ struct MainView: View {
                 AnimatedLaunchScreen()
             case .authorization:
                 AuthView(viewModel: .init(service: service))
-                    .transition(.slide)
+                    .transition(.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .trailing)))
             case .registration:
                 RegisterView(viewModel: .init(service: service))
-                    .transition(.slide)
+                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
             case .tabBar:
                 TabView {
                     CatView(state: .init(service: service))
@@ -37,7 +37,7 @@ struct MainView: View {
                         .tag(1)
                 }
                 .accentColor(Color(UIColor.clear))
-                .transition(.slide)
+                .transition(.opacity)
                 
             }
     }

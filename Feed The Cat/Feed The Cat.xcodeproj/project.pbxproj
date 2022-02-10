@@ -23,6 +23,11 @@
 		3F67F1DB27B30AC0004BCD3F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67F1DA27B30AC0004BCD3F /* AppState.swift */; };
 		3F67F1DD27B310CE004BCD3F /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67F1DC27B310CE004BCD3F /* ResultViewModel.swift */; };
 		3F67F1DF27B31278004BCD3F /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67F1DE27B31278004BCD3F /* InstructionView.swift */; };
+		3F68417F27B4FA31004BBFD4 /* AchievementsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F68417E27B4FA31004BBFD4 /* AchievementsListView.swift */; };
+		3F68418127B4FA8E004BBFD4 /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F68418027B4FA8E004BBFD4 /* AchievementView.swift */; };
+		3F68418327B4FC42004BBFD4 /* GlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F68418227B4FC42004BBFD4 /* GlassView.swift */; };
+		3F68418627B505BE004BBFD4 /* AchievementInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F68418527B505BE004BBFD4 /* AchievementInfo.swift */; };
+		3F68418827B5078B004BBFD4 /* AchievementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F68418727B5078B004BBFD4 /* AchievementViewModel.swift */; };
 		3FB493EA27AA6BF1009E8D3B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493E927AA6BF1009E8D3B /* GameView.swift */; };
 		3FB493EE27AA745F009E8D3B /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493ED27AA745F009E8D3B /* HUDView.swift */; };
 		3FB493F027AA90C0009E8D3B /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493EF27AA90C0009E8D3B /* AuthTextField.swift */; };
@@ -61,6 +66,11 @@
 		3F67F1DA27B30AC0004BCD3F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		3F67F1DC27B310CE004BCD3F /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		3F67F1DE27B31278004BCD3F /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
+		3F68417E27B4FA31004BBFD4 /* AchievementsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsListView.swift; sourceTree = "<group>"; };
+		3F68418027B4FA8E004BBFD4 /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
+		3F68418227B4FC42004BBFD4 /* GlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassView.swift; sourceTree = "<group>"; };
+		3F68418527B505BE004BBFD4 /* AchievementInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementInfo.swift; sourceTree = "<group>"; };
+		3F68418727B5078B004BBFD4 /* AchievementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViewModel.swift; sourceTree = "<group>"; };
 		3FB493E927AA6BF1009E8D3B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		3FB493ED27AA745F009E8D3B /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
 		3FB493EF27AA90C0009E8D3B /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
@@ -98,9 +108,10 @@
 		3F207A3D27B0FE61001480AB /* Options */ = {
 			isa = PBXGroup;
 			children = (
+				3F512A5027B03558007B5206 /* Result */,
+				3F68418427B4FDE4004BBFD4 /* Achievements */,
 				3F512A5427B03D98007B5206 /* AuthorView.swift */,
 				3F207A3B27B0FE1D001480AB /* OptionsView.swift */,
-				3F512A5027B03558007B5206 /* Result */,
 				3F67F1DE27B31278004BCD3F /* InstructionView.swift */,
 			);
 			path = Options;
@@ -142,6 +153,18 @@
 				3F1684A827B2488A0093AFC4 /* RedButton.swift */,
 			);
 			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		3F68418427B4FDE4004BBFD4 /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				3F68417E27B4FA31004BBFD4 /* AchievementsListView.swift */,
+				3F68418027B4FA8E004BBFD4 /* AchievementView.swift */,
+				3F68418227B4FC42004BBFD4 /* GlassView.swift */,
+				3F68418527B505BE004BBFD4 /* AchievementInfo.swift */,
+				3F68418727B5078B004BBFD4 /* AchievementViewModel.swift */,
+			);
+			path = Achievements;
 			sourceTree = "<group>";
 		};
 		3FB493F127AAA08D009E8D3B /* Login */ = {
@@ -314,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F1BA77B27ABB7BA00A3BE5E /* RegisterView.swift in Sources */,
+				3F68417F27B4FA31004BBFD4 /* AchievementsListView.swift in Sources */,
 				3FB493EE27AA745F009E8D3B /* HUDView.swift in Sources */,
 				3F512A5227B03578007B5206 /* ResultInfo.swift in Sources */,
 				3FB493F027AA90C0009E8D3B /* AuthTextField.swift in Sources */,
@@ -322,14 +346,17 @@
 				3FD7E1E327A9A27600A727DD /* Feed_The_CatApp.swift in Sources */,
 				3F512A4F27B03551007B5206 /* ResultView.swift in Sources */,
 				3FD7E1F827A9A81C00A727DD /* AuthView.swift in Sources */,
+				3F68418827B5078B004BBFD4 /* AchievementViewModel.swift in Sources */,
 				3FC0E46F27ADA7400071974D /* AnimatedView.swift in Sources */,
 				3F512A5527B03D98007B5206 /* AuthorView.swift in Sources */,
 				3FE42F1927AC03B500476D14 /* FirebaseService.swift in Sources */,
+				3F68418127B4FA8E004BBFD4 /* AchievementView.swift in Sources */,
 				3FD7E1F127A9A2B600A727DD /* CatView.swift in Sources */,
 				3F207A3C27B0FE1D001480AB /* OptionsView.swift in Sources */,
 				3F207A3F27B106CC001480AB /* ActivityView.swift in Sources */,
 				3FE42F1B27AC056600476D14 /* RegisterViewModel.swift in Sources */,
 				3F1684A727B245880093AFC4 /* NewGameView.swift in Sources */,
+				3F68418627B505BE004BBFD4 /* AchievementInfo.swift in Sources */,
 				3F67F1DB27B30AC0004BCD3F /* AppState.swift in Sources */,
 				3FE42F1727AC03A500476D14 /* AuthViewModel.swift in Sources */,
 				3FCA30AE27B29DE5006A0701 /* Service.swift in Sources */,
@@ -338,6 +365,7 @@
 				3F207A4327B118D7001480AB /* AnimatedLaunchScreen.swift in Sources */,
 				3F56211227AEB4180031F26A /* MainView.swift in Sources */,
 				3F1684A927B2488A0093AFC4 /* RedButton.swift in Sources */,
+				3F68418327B4FC42004BBFD4 /* GlassView.swift in Sources */,
 				3FB493F527AAA6DC009E8D3B /* GameItem.swift in Sources */,
 				3F67F1DD27B310CE004BCD3F /* ResultViewModel.swift in Sources */,
 			);

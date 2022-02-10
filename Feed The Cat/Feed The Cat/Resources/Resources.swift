@@ -12,7 +12,6 @@ enum Resources {
     enum Fonts {
         static func molle(size: CGFloat) -> Font {
             Font.custom("Molle-Regular", size: size)
-    
         }
     }
     
@@ -24,6 +23,8 @@ enum Resources {
         static var burger = Image("burger")
         static var fish = Image("fish")
         static var sausage = Image("sausage")
+        static var molotov = Image("molotov")
+        static var superCat = Image("supercat")
     }
     
     enum Colors {

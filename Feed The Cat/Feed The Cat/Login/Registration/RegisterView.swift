@@ -28,7 +28,9 @@ struct RegisterView: View {
                 .padding(.horizontal)
                 VStack {
                     RedButton(text: Constants.registerTitle) { viewModel.registerSubject.send(Void())}
-                    Button(action: { appState.flow = .authorization }) {
+                    Button(action: { withAnimation {
+                        appState.flow = .authorization
+                    } }) {
                         Text(Constants.loginTitle)
                             .foregroundColor(Resources.Colors.main)
                             .font(Resources.Fonts.molle(size: 18))
@@ -42,7 +44,9 @@ struct RegisterView: View {
         .alert(Constants.errorMessage, isPresented: $viewModel.showAlert, actions: {})
         .onReceive(viewModel.$isAuthorized) {
             if $0 {
-                appState.flow = .tabBar
+                withAnimation {
+                    appState.flow = .tabBar
+                }
             }
         }
     
