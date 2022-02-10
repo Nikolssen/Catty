@@ -36,7 +36,7 @@ struct RegisterView: View {
                             .font(Resources.Fonts.molle(size: 18))
                             .frame(alignment: .trailing)
                     }
-                    .buttonStyle(.borderless)
+                    .buttonStyle(.plain)
                 }
             }
             .ignoresSafeArea()

@@ -28,15 +28,6 @@ struct AuthView: View {
                 .padding(.horizontal)
                 
                 RedButton(text: Constants.loginTitle, action: { viewModel.loginSubject.send(Void()) })
-                HStack {
-                    Button(action: {}) {
-                        Text(Constants.gameCenterTitle)
-                            .foregroundColor(Resources.Colors.main)
-                            .font(Resources.Fonts.molle(size: 18))
-                            .frame(alignment: .leading)
-                    }
-                    .buttonStyle(.borderless)
-                    Spacer()
                     Button(action: {
                         withAnimation {
                             appState.flow = .registration
@@ -46,9 +37,7 @@ struct AuthView: View {
                             .font(Resources.Fonts.molle(size: 18))
                             .frame(alignment: .trailing)
                     }
-                    .buttonStyle(.borderless)
-                }
-                .padding(.horizontal, 30)
+                        .buttonStyle(.plain)
 
             }
             .ignoresSafeArea()
