@@ -10,21 +10,22 @@ import SwiftUI
 struct AchievementsListView: View {
     @StateObject var viewModel: AchievementViewModel
     var body: some View {
-        VStack {
+        ZStack {
+            Resources.Colors.background
+                .ignoresSafeArea()
             if viewModel.isLoading {
                 ProgressView()
-                if let models = viewModel.models{
-                    ScrollView {
-                        LazyVGrid(columns: [.init(.flexible(minimum: 50, maximum: .infinity), spacing: 20, alignment: .center)]) {
-                            ForEach(models, id: \.index) {
-                                AchievementView(achievement: $0.achievement, isPosessed: $0.isPosessed)
-                            }
+            }
+            if let models = viewModel.models{
+                ScrollView {
+                    LazyVGrid(columns: [.init(.flexible(minimum: 50, maximum: .infinity), spacing: 20, alignment: .center)]) {
+                        ForEach(models, id: \.index) {
+                            AchievementView(achievement: $0.achievement, isPosessed: $0.isPosessed)
                         }
                     }
                 }
             }
         }
-        .background(Resources.Colors.background)
         .onAppear {
             viewModel.startSubject.send(Void())
         }

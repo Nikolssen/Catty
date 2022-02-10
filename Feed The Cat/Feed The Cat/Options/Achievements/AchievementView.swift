@@ -22,7 +22,7 @@ struct AchievementView: View {
             }
         }
         .foregroundColor(isPosessed ? Resources.Colors.main : Color.gray)
-        .padding()
+        .frame(maxWidth: .infinity, minHeight: 50, alignment: .center)
         .background(GlassView())
         .clipShape(Capsule(style: .continuous))
         .padding(.horizontal, 10)

@@ -15,6 +15,8 @@ final class GameState: ObservableObject {
     let service: Service
     private(set) var lastGameResult: ResultInfo?
     private(set) var isGameStarted: Bool = false
+    private(set) var poisonCount: Int = 0
+    private(set) var timesSurvived: Int = 0
     private(set) var models: [GameItem] = []
     
     init(service: Service) {
@@ -38,6 +40,10 @@ final class GameState: ObservableObject {
             }
             else {
                 lives -= 1
+                timesSurvived += 1
+                if model.kind == .toxic {
+                    poisonCount += 1
+                }
                 UIImpactFeedbackGenerator(style: .soft).impactOccurred()
                 if lives == 0 {
                     let result = ResultInfo(date: .now, score: satiety, player: service.firebaseService.currentPlayer ?? "Unknown Player")
@@ -68,11 +74,19 @@ final class GameState: ObservableObject {
     func newGame() {
         satiety = 0
         lives = 2
+        poisonCount = 0
+        timesSurvived = 0
         isGameStarted = true
     }
     
     func report(result: ResultInfo) {
         service.firebaseService.publishUserResult(result: result)
-//        service.firebaseService.publishUserAchievement(name: )
+        if self.poisonCount >= 5 {
+            service.firebaseService.publishUserAchievement(name: "Molotov's Cat")
+        }
+        if self.timesSurvived == 9 {
+            service.firebaseService.publishUserAchievement(name: "A cat that has nine lives")
+        }
+        
     }
 }

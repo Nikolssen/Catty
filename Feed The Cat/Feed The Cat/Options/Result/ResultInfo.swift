@@ -14,6 +14,8 @@ struct ResultInfo {
 }
 
 struct ResultInfoViewModel {
-    let result: ResultInfo
+    let date: String
+    let score: String
+    let player: String
     let index: Int
 }

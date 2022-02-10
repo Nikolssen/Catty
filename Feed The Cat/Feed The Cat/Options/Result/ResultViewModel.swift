@@ -8,6 +8,19 @@
 import Foundation
 import Combine
 
+extension DateFormatter {
+    static var extendedDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d MMM, HH:mm"
+        return formatter
+    }()
+    
+    static func convert(date: Date) -> String {
+        let formatter = extendedDateFormatter
+        return formatter.string(from: date)
+    }
+}
+
 final class ResultViewModel: ObservableObject {
     @Published var results: [ResultInfoViewModel]?
     @Published var isLoading: Bool = false
@@ -28,7 +41,7 @@ final class ResultViewModel: ObservableObject {
             .map {
                 var array: [ResultInfoViewModel] = []
                 for (index, value) in $0.enumerated() {
-                    array.append(.init(result: value, index: index))
+                    array.append(.init(date: DateFormatter.convert(date: value.date), score: String(value.score), player: value.player, index: index))
                 }
                 return array
             }

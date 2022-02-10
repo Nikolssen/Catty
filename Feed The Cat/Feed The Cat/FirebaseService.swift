@@ -72,8 +72,8 @@ final class FirebaseService {
                             let data  = document.data()
                             if let score = data["score"] as? Int,
                                let player = data["player"] as? String,
-                               let date = data["date"] as? Date {
-                                return ResultInfo(date: date, score: score, player: player)
+                               let timestamp = data["date"] as? Timestamp {
+                                return ResultInfo(date: timestamp.dateValue(), score: score, player: player)
                             }
                             return nil
                         }
