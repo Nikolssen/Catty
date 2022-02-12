@@ -133,21 +133,4 @@ final class FirebaseService {
             
         }
     }
-    //
-    //    func signIn(googleCredentials: AuthCredential) -> Single<AuthDataResult>{
-    //        return Single<AuthDataResult>.create{
-    //            single in
-    //            Auth.auth().signIn(with: googleCredentials){
-    //                result, error in
-    //                if let error = error {
-    //                    single(.failure(error))
-    //                }
-    //                else {
-    //                    single(.success(result!))
-    //                }
-    //
-    //            }
-    //            return Disposables.create()
-    //        }
-    //    }
 }

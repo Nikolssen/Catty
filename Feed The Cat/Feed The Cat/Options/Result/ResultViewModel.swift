@@ -38,6 +38,7 @@ final class ResultViewModel: ObservableObject {
             .flatMapLatest {[service] in
                 service.firebaseService.getUserResults(userUID: $0)
             }
+            .map { $0.sorted { $0.date > $1.date } }
             .map {
                 var array: [ResultInfoViewModel] = []
                 for (index, value) in $0.enumerated() {

@@ -155,6 +155,7 @@
 		3F207A3D27B0FE61001480AB /* Options */ = {
 			isa = PBXGroup;
 			children = (
+				3F68418227B4FC42004BBFD4 /* GlassView.swift */,
 				3F512A5027B03558007B5206 /* Result */,
 				3F68418427B4FDE4004BBFD4 /* Achievements */,
 				3F512A5427B03D98007B5206 /* AuthorView.swift */,
@@ -207,7 +208,6 @@
 			children = (
 				3F68417E27B4FA31004BBFD4 /* AchievementsListView.swift */,
 				3F68418027B4FA8E004BBFD4 /* AchievementView.swift */,
-				3F68418227B4FC42004BBFD4 /* GlassView.swift */,
 				3F68418527B505BE004BBFD4 /* AchievementInfo.swift */,
 				3F68418727B5078B004BBFD4 /* AchievementViewModel.swift */,
 			);

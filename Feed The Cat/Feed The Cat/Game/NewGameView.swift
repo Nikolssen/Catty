@@ -21,7 +21,7 @@ struct NewGameView: View {
                         .foregroundColor(Resources.Colors.main)
                 }
                 .padding(.horizontal, 35)
-                .sheet(isPresented: $shareResult, content: {ActivityView(activityItems: ["I got \(result.score) points in Play the Cat Game!!!"])})
+                .sheet(isPresented: $shareResult, content: {ActivityView(activityItems: ["I got \(result.score) points in Feed the Cat Game!"])})
             }
             RedButton(text: "New Game!", action: { state.newGame() })
         }
