@@ -37,7 +37,7 @@ final class RegisterViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .handleEvents(receiveCompletion: { [weak self] _ in self?.showAlert = true })
             .retry(1)
-            .sink(receiveCompletion: {_ in }, receiveValue: {[weak self] in self?.isAuthorized = true })
+            .sink(receiveCompletion: {_ in }, receiveValue: { [weak self] in self?.isAuthorized = true })
             .store(in: &subscribtions)
         
         validationPublisher

@@ -28,13 +28,6 @@
 		3F68418327B4FC42004BBFD4 /* GlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F68418227B4FC42004BBFD4 /* GlassView.swift */; };
 		3F68418627B505BE004BBFD4 /* AchievementInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F68418527B505BE004BBFD4 /* AchievementInfo.swift */; };
 		3F68418827B5078B004BBFD4 /* AchievementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F68418727B5078B004BBFD4 /* AchievementViewModel.swift */; };
-		3F68419027B53000004BBFD4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F68418F27B53000004BBFD4 /* WidgetKit.framework */; };
-		3F68419227B53000004BBFD4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F68419127B53000004BBFD4 /* SwiftUI.framework */; };
-		3F68419527B53000004BBFD4 /* Cat_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F68419427B53000004BBFD4 /* Cat_Widget.swift */; };
-		3F68419827B53001004BBFD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F68419727B53001004BBFD4 /* Assets.xcassets */; };
-		3F68419A27B53001004BBFD4 /* Cat_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3F68419627B53000004BBFD4 /* Cat_Widget.intentdefinition */; };
-		3F68419B27B53001004BBFD4 /* Cat_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3F68419627B53000004BBFD4 /* Cat_Widget.intentdefinition */; };
-		3F68419E27B53001004BBFD4 /* Cat-WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3F68418D27B53000004BBFD4 /* Cat-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3FB493EA27AA6BF1009E8D3B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493E927AA6BF1009E8D3B /* GameView.swift */; };
 		3FB493EE27AA745F009E8D3B /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493ED27AA745F009E8D3B /* HUDView.swift */; };
 		3FB493F027AA90C0009E8D3B /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB493EF27AA90C0009E8D3B /* AuthTextField.swift */; };
@@ -48,8 +41,6 @@
 		3FD7E1F127A9A2B600A727DD /* CatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E1F027A9A2B600A727DD /* CatView.swift */; };
 		3FD7E1F327A9A38100A727DD /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E1F227A9A38100A727DD /* Resources.swift */; };
 		3FD7E1F827A9A81C00A727DD /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7E1F727A9A81C00A727DD /* AuthView.swift */; };
-		3FDB810B27B8535F00B1AD3B /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB810927B852FD00B1AD3B /* Provider.swift */; };
-		3FDB810E27B8539200B1AD3B /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB810C27B8537100B1AD3B /* TimelineEntry.swift */; };
 		3FE42F1027AC02D800476D14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE42F0F27AC02D800476D14 /* GoogleService-Info.plist */; };
 		3FE42F1327AC034700476D14 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3FE42F1227AC034700476D14 /* FirebaseAuth */; };
 		3FE42F1527AC034700476D14 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3FE42F1427AC034700476D14 /* FirebaseFirestore */; };
@@ -58,16 +49,6 @@
 		3FE42F1B27AC056600476D14 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE42F1A27AC056600476D14 /* RegisterViewModel.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		3F68419C27B53001004BBFD4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3FD7E1D727A9A27600A727DD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3F68418C27B53000004BBFD4;
-			remoteInfo = "Cat-WidgetExtension";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		3F6841A227B53001004BBFD4 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -75,7 +56,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3F68419E27B53001004BBFD4 /* Cat-WidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,13 +84,8 @@
 		3F68418227B4FC42004BBFD4 /* GlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassView.swift; sourceTree = "<group>"; };
 		3F68418527B505BE004BBFD4 /* AchievementInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementInfo.swift; sourceTree = "<group>"; };
 		3F68418727B5078B004BBFD4 /* AchievementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViewModel.swift; sourceTree = "<group>"; };
-		3F68418D27B53000004BBFD4 /* Cat-WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Cat-WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F68418F27B53000004BBFD4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		3F68419127B53000004BBFD4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		3F68419427B53000004BBFD4 /* Cat_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat_Widget.swift; sourceTree = "<group>"; };
-		3F68419627B53000004BBFD4 /* Cat_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Cat_Widget.intentdefinition; sourceTree = "<group>"; };
-		3F68419727B53001004BBFD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3F68419927B53001004BBFD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FB493E927AA6BF1009E8D3B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		3FB493ED27AA745F009E8D3B /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
 		3FB493EF27AA90C0009E8D3B /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
@@ -125,8 +100,6 @@
 		3FD7E1F227A9A38100A727DD /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		3FD7E1F627A9A50B00A727DD /* Feed-The-Cat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Feed-The-Cat-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3FD7E1F727A9A81C00A727DD /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
-		3FDB810927B852FD00B1AD3B /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
-		3FDB810C27B8537100B1AD3B /* TimelineEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
 		3FE42F0F27AC02D800476D14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FE42F1627AC03A500476D14 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		3FE42F1827AC03B500476D14 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
@@ -134,15 +107,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3F68418A27B53000004BBFD4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F68419227B53000004BBFD4 /* SwiftUI.framework in Frameworks */,
-				3F68419027B53000004BBFD4 /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3FD7E1DC27A9A27600A727DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,19 +191,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3F68419327B53000004BBFD4 /* Cat-Widget */ = {
-			isa = PBXGroup;
-			children = (
-				3FDB810C27B8537100B1AD3B /* TimelineEntry.swift */,
-				3FDB810927B852FD00B1AD3B /* Provider.swift */,
-				3F68419427B53000004BBFD4 /* Cat_Widget.swift */,
-				3F68419627B53000004BBFD4 /* Cat_Widget.intentdefinition */,
-				3F68419727B53001004BBFD4 /* Assets.xcassets */,
-				3F68419927B53001004BBFD4 /* Info.plist */,
-			);
-			path = "Cat-Widget";
-			sourceTree = "<group>";
-		};
 		3FB493F127AAA08D009E8D3B /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				3FD7E1E127A9A27600A727DD /* Feed The Cat */,
-				3F68419327B53000004BBFD4 /* Cat-Widget */,
 				3F68418E27B53000004BBFD4 /* Frameworks */,
 				3FD7E1E027A9A27600A727DD /* Products */,
 			);
@@ -296,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				3FD7E1DF27A9A27600A727DD /* Feed The Cat.app */,
-				3F68418D27B53000004BBFD4 /* Cat-WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -333,23 +282,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F68418C27B53000004BBFD4 /* Cat-WidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3F68419F27B53001004BBFD4 /* Build configuration list for PBXNativeTarget "Cat-WidgetExtension" */;
-			buildPhases = (
-				3F68418927B53000004BBFD4 /* Sources */,
-				3F68418A27B53000004BBFD4 /* Frameworks */,
-				3F68418B27B53000004BBFD4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Cat-WidgetExtension";
-			productName = "Cat-WidgetExtension";
-			productReference = 3F68418D27B53000004BBFD4 /* Cat-WidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		3FD7E1DE27A9A27600A727DD /* Feed The Cat */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FD7E1ED27A9A27800A727DD /* Build configuration list for PBXNativeTarget "Feed The Cat" */;
@@ -362,7 +294,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3F68419D27B53001004BBFD4 /* PBXTargetDependency */,
 			);
 			name = "Feed The Cat";
 			packageProductDependencies = (
@@ -384,9 +315,6 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					3F68418C27B53000004BBFD4 = {
-						CreatedOnToolsVersion = 13.2.1;
-					};
 					3FD7E1DE27A9A27600A727DD = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -410,20 +338,11 @@
 			projectRoot = "";
 			targets = (
 				3FD7E1DE27A9A27600A727DD /* Feed The Cat */,
-				3F68418C27B53000004BBFD4 /* Cat-WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3F68418B27B53000004BBFD4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F68419827B53001004BBFD4 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3FD7E1DD27A9A27600A727DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,17 +358,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3F68418927B53000004BBFD4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F68419527B53000004BBFD4 /* Cat_Widget.swift in Sources */,
-				3FDB810B27B8535F00B1AD3B /* Provider.swift in Sources */,
-				3F68419A27B53001004BBFD4 /* Cat_Widget.intentdefinition in Sources */,
-				3FDB810E27B8539200B1AD3B /* TimelineEntry.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3FD7E1DB27A9A27600A727DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -483,7 +391,6 @@
 				3F207A4327B118D7001480AB /* AnimatedLaunchScreen.swift in Sources */,
 				3F56211227AEB4180031F26A /* MainView.swift in Sources */,
 				3F1684A927B2488A0093AFC4 /* RedButton.swift in Sources */,
-				3F68419B27B53001004BBFD4 /* Cat_Widget.intentdefinition in Sources */,
 				3F68418327B4FC42004BBFD4 /* GlassView.swift in Sources */,
 				3FB493F527AAA6DC009E8D3B /* GameItem.swift in Sources */,
 				3F67F1DD27B310CE004BCD3F /* ResultViewModel.swift in Sources */,
@@ -492,71 +399,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		3F68419D27B53001004BBFD4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3F68418C27B53000004BBFD4 /* Cat-WidgetExtension */;
-			targetProxy = 3F68419C27B53001004BBFD4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		3F6841A027B53001004BBFD4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9G6V47L895;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Cat-Widget/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Cat-Widget";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Budovich.Ivan.Feed-The-Cat.Cat-Widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3F6841A127B53001004BBFD4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9G6V47L895;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Cat-Widget/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Cat-Widget";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Budovich.Ivan.Feed-The-Cat.Cat-Widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		3FD7E1EB27A9A27800A727DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -676,7 +519,6 @@
 		3FD7E1EE27A9A27800A727DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -711,7 +553,6 @@
 		3FD7E1EF27A9A27800A727DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -746,15 +587,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3F68419F27B53001004BBFD4 /* Build configuration list for PBXNativeTarget "Cat-WidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3F6841A027B53001004BBFD4 /* Debug */,
-				3F6841A127B53001004BBFD4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		3FD7E1DA27A9A27600A727DD /* Build configuration list for PBXProject "Feed The Cat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
